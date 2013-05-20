@@ -8,17 +8,7 @@
 
 ### Install symfony skeleton
 
-Light version
-
-    composer.phar create-project rithis/symfony-skeleton <target-directory> dev-master
-
-With Doctrine ORM
-
-    composer.phar create-project rithis/symfony-skeleton <target-directory> dev-orm
-
-With Doctrine ORM and Sonata Admin
-
-    composer.phar create-project rithis/symfony-skeleton <target-directory> dev-admin
+    composer.phar create-project unoegohh/symfony-standart <target-directory>
 
 ## Web Servers
 
@@ -57,4 +47,11 @@ server {
         fastcgi_param SCRIPT_FILENAME $document_root/app_dev.php;
     }
 }
+```
+
+### Console commands
+
+```
+php app/console doctrine:database:create
+php app/console doctrine:schema:update --force
 ```

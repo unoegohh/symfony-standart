@@ -22,7 +22,6 @@ doctrine:
     orm:
         auto_mapping: true
 
-# app/config/config.yml
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
