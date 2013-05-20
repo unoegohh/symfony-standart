@@ -1,25 +1,22 @@
 {
-    "name": "rithis/symfony-skeleton",
-    "description": "Symfony Skeleton created by Rithis Studio",
-    "keywords": ["rithis", "symfony", "skeleton"],
-    "homepage": "https://github.com/rithis/symfony-skeleton",
+    "name": "unoegohh/symfony-standart",
+    "description": "Symfony Skeleton created by Unoegohh",
+    "keywords": ["unoegohh", "symfony", "skeleton"],
+    "homepage": "https://github.com/unoegohh/symfony-standart",
     "license": "MIT",
     "authors": [
         {
-            "name": "Vyacheslav Slinko",
-            "email": "vyacheslav.slinko@rithis.com",
+            "name": "Karmakov Yuri",
+            "email": "unoegohh@gmail.com",
             "role": "Founder"
         }
     ],
     "support": {
-        "email": "support@rithis.com",
-        "issues": "https://github.com/rithis/symfony-skeleton/issues",
-        "wiki": "https://github.com/rithis/symfony-skeleton/wiki",
-        "source": "https://github.com/rithis/symfony-skeleton"
+        "email": "unoegohh@gmail.com",
+        "source": "https://github.com/unoegohh/symfony-standart"
     },
     "require": {
         "kriswallsmith/assetic": "@dev",
-
         "symfony/symfony": "2.2.*",
         "symfony/monolog-bundle": "2.2.*",
         "symfony/assetic-bundle": "2.1.*",
