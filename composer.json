@@ -1,0 +1,52 @@
+{
+    "name": "rithis/symfony-skeleton",
+    "description": "Symfony Skeleton created by Rithis Studio",
+    "keywords": ["rithis", "symfony", "skeleton"],
+    "homepage": "https://github.com/rithis/symfony-skeleton",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vyacheslav Slinko",
+            "email": "vyacheslav.slinko@rithis.com",
+            "role": "Founder"
+        }
+    ],
+    "support": {
+        "email": "support@rithis.com",
+        "issues": "https://github.com/rithis/symfony-skeleton/issues",
+        "wiki": "https://github.com/rithis/symfony-skeleton/wiki",
+        "source": "https://github.com/rithis/symfony-skeleton"
+    },
+    "require": {
+        "kriswallsmith/assetic": "@dev",
+
+        "symfony/symfony": "2.2.*",
+        "symfony/monolog-bundle": "2.2.*",
+        "symfony/assetic-bundle": "2.1.*",
+        "sensio/framework-extra-bundle": "2.2.*",
+        "sensio/generator-bundle": "2.3.*@dev",
+        "friendsofsymfony/user-bundle": "*",
+        "doctrine/orm": "2.3.*@dev",
+        "doctrine/doctrine-bundle": "1.2.*@dev",
+        "symfony/swiftmailer-bundle": "2.2.*@dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "Unoegohh": "src"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "touch app/config/parameters.yml",
+            "php app/console cache:clear",
+            "php app/console assets:install",
+            "php app/console assetic:dump"
+        ],
+        "post-update-cmd": [
+            "touch app/config/parameters.yml",
+            "php app/console cache:clear",
+            "php app/console assets:install",
+            "php app/console assetic:dump"
+        ]
+    }
+}
