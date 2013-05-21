@@ -11,20 +11,37 @@
     composer.phar create-project unoegohh/symfony-standart <target-directory>
 
 ## Web Servers
-
-Better way to start server is `php app/console server:run`, but sometimes web servers is necessary.
-
 ### apache
 
 ```
 <VirtualHost *:80>
-    DocumentRoot /var/www
+    DocumentRoot {{project path}}/web
     RewriteEngine On
     RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
     RewriteRule ^ /app_dev.php
+    
+    ServerName {{project url}}
 </VirtualHost>
 ```
+Windows apache
+```
+<VirtualHost *:80>
+    DocumentRoot "{{project path}}/web"
 
+    RewriteEngine On 
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+    RewriteRule .* /app_dev.php
+
+	<Directory "{{project path}}/web">
+		Options FollowSymLinks
+		AllowOverride None
+		Order allow,deny
+		Allow from all
+	</Directory>
+	
+    ServerName {{project url}}
+</VirtualHost>
+```
 ### nginx
 
 ```
@@ -49,7 +66,7 @@ server {
 }
 ```
 
-### Console commands
+### Console commands for database
 
 ```
 php app/console doctrine:database:create
